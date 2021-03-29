@@ -6,7 +6,6 @@
         init: function(){
             this.scrollEventFn();
             this.headerFn();
-            this.navFn();
             this.section1Fn();
             this.section2Fn();
             this.section3Fn();
@@ -110,7 +109,6 @@
 
             $nav.stop().show();
             $sub.stop().hide();
-            $nav.css({display:'inline-block'});
             
 
             $mainBtn.on({
@@ -186,29 +184,6 @@
         });
 
         },
-
-        navFn:function(){
-            var $mainBtn = $('#nav .main-btn')
-            var $sub     = $('#nav .sub')
-            var $navUl   = $('#nav > ul')
-
-            $mainBtn.on({
-                mouseenter:function(){     
-                    $mainBtn.removeClass('on');              
-                    $(this).addClass('on');
-                    
-                    
-                }
-            })
-            $navUl.on({
-                mouseleave:function(){      
-                    $mainBtn.removeClass('on');          
-                    $sub.removeClass('on');             
-                }
-            })
-        },
-
-
 
         section1Fn:function(){
 
